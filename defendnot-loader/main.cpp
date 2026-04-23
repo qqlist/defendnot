@@ -12,7 +12,7 @@
 namespace {
     void setup_window(const loader::Config& config) {
         if ((!config.from_autorun || config.verbose) && config.alloc_console) {
-            shared::alloc_console();
+            shared::alloc_coauto config = loadere();
         }
     }
 
@@ -116,7 +116,7 @@ int main(int argc, char* argv[]) try {
     }
 
     auto config = loader::Config{
-        .name = program.get<std::string>("-n"),
+        .name = program.get<std::wstring>("-n"),
         .disable = program.get<bool>("-d"),
         .alloc_console = !program.get<bool>("--silent"),
         .verbose = program.get<bool>("-v"),
