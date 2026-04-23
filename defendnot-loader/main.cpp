@@ -97,7 +97,7 @@ int main(int argc, char* argv[]) try {
         .action([&fatal_print](const auto& /*unused*/) -> void { fatal_print(std::format("{}-loader v{}", strings::kProjectName, strings::kVersion)); });
 
     /// defendnot-loader parameters:
-    program.add_argument("-n", "--name").help("av display name").default_value(std::string(strings::kDefaultAVName)).nargs(1);
+    program.add_argument("-n", "--name").help("av display name").default_value(std::wstring(strings::kDefaultAVName)).nargs(1);
     program.add_argument("-d", "--disable").help(std::format("disable {}", strings::kProjectName)).default_value(false).implicit_value(true);
     program.add_argument("-v", "--verbose").help("verbose logging").default_value(false).implicit_value(true);
     program.add_argument("--silent").help("do not allocate console").default_value(false).implicit_value(true);
