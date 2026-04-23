@@ -12,7 +12,7 @@
 namespace {
     void setup_window(const loader::Config& config) {
         if ((!config.from_autorun || config.verbose) && config.alloc_console) {
-            shared::alloc_coauto config = loadere();
+            shared::alloc_console();
         }
     }
 
