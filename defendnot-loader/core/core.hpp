@@ -12,7 +12,7 @@ namespace loader {
 
     struct Config {
     public:
-        std::string name;
+        std::wstring name;
         bool disable;
         bool alloc_console;
         bool verbose;
