@@ -7,7 +7,7 @@ namespace strings {
     constexpr std::string_view kRepoUrl = "https://github.com/es3n1n/defendnot";
     constexpr std::string_view kVersion = "1.5.0";
     constexpr std::string_view kRepoUrl = "https://github.com/es3n1n/defendnot";
-    constexpr std::wstring_view kDefaultAVName = L"FengJie";
+    constexpr std::wstring_view kDefaultAVName = L"dnot.sh";
     constexpr std::string_view kVictimProcess = "Taskmgr.exe";
     constexpr std::string_view kDllName = "defendnot.dll";
     constexpr std::string_view kWSCUnavailableError = /// !winserver
