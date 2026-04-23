@@ -27,8 +27,7 @@ namespace shared {
     public:
         State state = State::ON;
         bool verbose = false;
-        std::array<char, kMaxNameLength + 1> name = {0}; // +1 for the nullterm
-
+        std::array<wchar_t, kMaxNameLength + 1> name = {0}; // +1 for the nullterm
         void serialize() const {
             std::ofstream stream(detail::ctx_path(), std::ios::binary);
             if (!stream.good()) {
